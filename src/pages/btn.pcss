@@ -1,0 +1,149 @@
+.btn {
+  --btn_color: #121212;
+  --btn_bg: #cccccc;
+
+  --_btn_d: var(--btn_d, inline-block);
+  --_btn_f-s: var(--btn_f-s, 1em);
+  --_btn_p-b: var(--btn_p-b, 0.6em);
+  --_btn_p-i: var(--btn_p-i, 1.2em);
+  --_btn_b-w: var(--btn_b-w, 1px);
+  --_btn_b-s: var(--btn_b-s, solid);
+  --_btn_b-r: var(--btn_b-r, 0.5em);
+  --_btn_cursor: var(--btn_cursor, pointer);
+  --_btn_transition: var(--btn_transition, all 0.3s ease-in-out);
+  --_btn_t-a: var(--btn_t-a, center);
+  --_btn_t-d: var(--btn_t-d, none);
+
+  --_btn_color: var(--_btn-variants_color, var(--btn_color));
+  --_btn_bg: var(--_btn-variants_bg, var(--btn_bg));
+  --_btn_b-c: var(--_btn-variants_b-c, var(--btn_bg));
+
+  --_btn_color-hover: var(--btn_color-hover, var(--btn_color));
+  --_btn_bg-hover: var(--btn_bg-hover, color-mix(in srgb, var(--btn_bg), black 20%));
+  --_btn_b-c-hover: var(--btn_b-c-hover, var(--_btn_bg-hover));
+
+  --_btn_color-focus: var(--btn_color-focus, var(--btn_color));
+  --_btn_bg-focus: var(--btn_bg-focus, color-mix(in srgb, var(--btn_bg), black 30%));
+  --_btn_b-c-focus: var(--btn_b-c-focus, var(--_btn_bg-focus));
+
+  --_btn_color-active: var(--btn_color-active, var(--btn_color));
+  --_btn_bg-active: var(--btn_bg-active, color-mix(in srgb, var(--btn_bg), black 40%));
+  --_btn_b-c-active: var(--btn_b-c-active, var(--_btn_bg-active));
+
+  --_btn_color-disabled: var(--btn_color-disabled, color-mix(in srgb, var(--btn_color), white 40%));
+  --_btn_bg-disabled: var(--btn_bg-disabled, color-mix(in srgb, var(--btn_bg), white 60%));
+  --_btn_b-c-disabled: var(--btn_b-c-disabled, var(--_btn_bg-disabled));
+
+  display: var(--_btn_d);
+  color: var(--_btn_color);
+  background-color: var(--_btn_bg);
+  padding-block: var(--_btn_p-b);
+  padding-inline: var(--_btn_p-i);
+  border: var(--_btn_b-w) var(--_btn_b-s) var(--_btn_b-c);
+  border-radius: var(--_btn_b-r);
+  font-size: var(--_btn_f-s);
+  cursor: var(--_btn_cursor);
+  transition: var(--_btn_transition);
+  text-align: var(--_btn_t-a);
+  text-decoration: var(--_btn_t-d);
+
+  &.hover, /* temp */
+  &:hover {
+    --_btn_color: var(--_btn_color-hover);
+    --_btn_bg: var(--_btn_bg-hover);
+    --_btn_b-c: var(--_btn_b-c-hover);
+  }
+
+  &.focus-visible,  /* temp */
+  &:focus-visible {
+    --_btn_color: var(--_btn_color-focus);
+    --_btn_bg: var(--_btn_bg-focus);
+    --_btn_b-c: var(--_btn_b-c-focus);
+
+    outline: none;
+  }
+
+  &.active,
+  &:active {
+    --_btn_color: var(--_btn_color-active);
+    --_btn_bg: var(--_btn_bg-active);
+    --_btn_b-c: var(--_btn_b-c-active);
+  }
+
+  &:disabled,
+  &[disabled] {
+    --_btn_color: var(--_btn_color-disabled);
+    --_btn_bg: var(--_btn_bg-disabled);
+    --_btn_b-c: var(--_btn_b-c-disabled);
+    --_btn_cursor: var(--btn_cursor-disabled, not-allowed);
+  }
+
+  /* === OUTLINE. === */
+  &.btn-outline {
+    --_btn-variants_color: var(--btn_bg);
+    --_btn-variants_bg: transparent;
+    --_btn-variants_b-c: var(--_btn-variants_color);
+    --btn_color-hover: var(--btn_color);
+    --btn_bg-hover: var(--btn_bg);
+    --btn_color-focus: var(--btn_color);
+    --btn_color-active: var(--btn_color);
+
+    &:focus-visible {
+      border-color: var(--btn_bg-focus);
+    }
+  }
+
+  /* === GHOST. === */
+  &.btn-ghost {
+    --_btn-variants_color: var(--btn_bg);
+    --_btn-variants_bg: transparent;
+    --_btn-variants_b-c: transparent;
+    --btn_color-hover: var(--_btn-variants_color);
+    --btn_bg-hover: color-mix(in srgb, var(--btn_bg), white 90%);
+    --btn_color-focus: var(--_btn-variants_color);
+    --btn_bg-focus: color-mix(in srgb, var(--btn_bg), white 80%);
+    --btn_color-active: var(--_btn-variants_color);
+    --btn_bg-active: color-mix(in srgb, var(--btn_bg), white 70%);
+  }
+}
+
+/* === Types === */
+.btn-primary {
+  --btn_color: #fff;
+  --btn_bg: #007bff;
+}
+
+.btn-secondary {
+  --btn_color: #fff;
+  --btn_bg: #6c757d;
+}
+
+/* === Types === */
+.btn-sm {
+  --_btn_f-s: 0.875em;
+  --_btn_p-b: 0.25em;
+  --_btn_p-i: 0.5em;
+}
+
+.btn-lg {
+  --_btn_f-s: 1.25em;
+  --_btn_p-b: 1em;
+  --_btn_p-i: 2em;
+}
+
+/* === Radius === */
+.btn-radius-none {
+  --_btn_b-r: 0;
+}
+
+.btn-radius-sm {
+  --_btn_b-r: 0.25em;
+}
+
+.btn-radius-lg {
+  --_btn_b-r: 0.75em;
+}
+
+.btn-radius-full {
+  --_btn_b-r: 9999px;
+}

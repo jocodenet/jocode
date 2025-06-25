@@ -1,0 +1,117 @@
+---
+import './btn.pcss';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Button Component',
+};
+---
+
+<Layout metadata={metadata}>
+  <div class='grid'>
+    <p>
+      <button class='btn'>Button</button>
+      <button class='btn hover'>Button hover</button>
+      <button class='btn focus-visible'>Button focus-visible</button>
+      <button class='btn active'>Button active</button>
+      <button class='btn' disabled>Button disabled</button>
+    </p>
+
+    <h2>btn-outline</h2>
+    <p>
+      <button class='btn btn-outline'>Button outline</button>
+      <button class='btn btn-outline hover'>Button outline hover</button>
+      <button class='btn btn-outline focus-visible'>Button outline focus-visible</button>
+      <button class='btn btn-outline active'>Button outline active</button>
+      <button class='btn btn-outline' disabled>Button outline disabled</button>
+    </p>
+
+    <h2>btn-ghost</h2>
+    <p>
+      <button class='btn btn-ghost'>Button ghost</button>
+      <button class='btn btn-ghost hover'>Button hover</button>
+      <button class='btn btn-ghost focus-visible'>Button focus-visible</button>
+      <button class='btn btn-ghost active'>Button active</button>
+      <button class='btn btn-ghost' disabled>Button disabled</button>
+    </p>
+
+    <h2>primary</h2>
+    <p>
+      <button class='btn btn-primary'>Primary Button</button>
+      <button class='btn btn-primary hover'>Button hover</button>
+      <button class='btn btn-primary focus-visible'>Button focus-visible</button>
+      <button class='btn btn-primary active'>Button active</button>
+      <button class='btn btn-primary' disabled>Button disabled</button>
+    </p>
+    <h2>primary outline</h2>
+    <p>
+      <button class='btn btn-outline btn-primary'>Button outline primary</button>
+      <button class='btn btn-outline btn-primary hover'>Button hover</button>
+      <button class='btn btn-outline btn-primary focus-visible'>Button focus-visible</button>
+      <button class='btn btn-outline btn-primary active'>Button active</button>
+      <button class='btn btn-outline btn-primary' disabled>Button disabled</button>
+    </p>
+    <h2>primary ghost</h2>
+    <p>
+      <button class='btn btn-ghost btn-primary'>Button ghost primary</button>
+      <button class='btn btn-ghost btn-primary hover'>Button hover</button>
+      <button class='btn btn-ghost btn-primary focus-visible'>Button focus-visible</button>
+      <button class='btn btn-ghost btn-primary active'>Button active</button>
+      <button class='btn btn-ghost btn-primary' disabled>Button disabled</button>
+    </p>
+
+    <h2>secondary</h2>
+    <p>
+      <button class='btn btn-secondary'>secondary Button</button>
+      <button class='btn btn-secondary hover'>Button hover</button>
+      <button class='btn btn-secondary focus-visible'>Button focus-visible</button>
+      <button class='btn btn-secondary active'>Button active</button>
+      <button class='btn btn-secondary' disabled>Button disabled</button>
+    </p>
+    <h2>secondary outline</h2>
+    <p>
+      <button class='btn btn-outline btn-secondary'>Button outline secondary</button>
+      <button class='btn btn-outline btn-secondary hover'>Button hover</button>
+      <button class='btn btn-outline btn-secondary focus-visible'>Button focus-visible</button>
+      <button class='btn btn-outline btn-secondary active'>Button active</button>
+      <button class='btn btn-outline btn-secondary' disabled>Button disabled</button>
+    </p>
+    <h2>secondary ghost</h2>
+    <p>
+      <button class='btn btn-ghost btn-secondary'>Button ghost secondary</button>
+      <button class='btn btn-ghost btn-secondary hover'>Button hover</button>
+      <button class='btn btn-ghost btn-secondary focus-visible'>Button focus-visible</button>
+      <button class='btn btn-ghost btn-secondary active'>Button active</button>
+      <button class='btn btn-ghost btn-secondary' disabled>Button disabled</button>
+    </p>
+
+    <h2>size</h2>
+    <p>
+      <button class='btn btn-outline btn-primary btn-sm'>Button small</button>
+      <button class='btn btn-outline btn-primary'>Button normal</button>
+      <button class='btn btn-outline btn-primary btn-lg'>Button large</button>
+    </p>
+
+    <h2>Radius</h2>
+    <p>
+      <button class='btn btn-outline btn-primary btn-radius-none'>Button radius none</button>
+      <button class='btn btn-outline btn-primary btn-radius-sm'>Button radius small</button>
+      <button class='btn btn-outline btn-primary'>Button radius normal</button>
+      <button class='btn btn-outline btn-primary btn-radius-lg'>Button radius large</button>
+      <button class='btn btn-outline btn-primary btn-radius-full'>Button raius raunded</button>
+    </p>
+  </div>
+</Layout>
+
+<style>
+  .grid {
+    display: grid;
+    gap: 1rem;
+
+    & > p {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+  }
+</style>
